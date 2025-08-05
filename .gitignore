@@ -1,0 +1,6 @@
+# Dependencies
+node_modules/
+
+# Local SSL files
+localhost.pem
+localhost-key.pem
