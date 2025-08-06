@@ -102,12 +102,9 @@ app.get('/logout', (req, res, next) => {
     });
 });
 
-// --- HTTPS Server Setup ---
-const options = {
-    key: fs.readFileSync('localhost-key.pem'),
-    cert: fs.readFileSync('localhost.pem')
-};
-
-https.createServer(options, app).listen(PORT, () => {
-    console.log(`Server is running securely on https://localhost:${PORT}`);
+// --- ADD THIS BLOCK INSTEAD ---
+app.listen(3000, () => {
+    console.log('Server is ready.');
 });
+
+module.exports = app;
